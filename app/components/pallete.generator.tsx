@@ -78,9 +78,9 @@ export default function ColorPalette() {
       primary: primaryColor,
       split: hslToHex(adjustHue(primaryHsl.h, 180), primaryHsl.s, primaryHsl.l),
       ...generateShades(primaryHsl),
-      analogous,
-      triadic,
-      splitCont: split,
+      Analogous:analogous,
+      Triadic: triadic,
+      Split: split,
     };
 
     return colorResponse;
@@ -135,7 +135,7 @@ export default function ColorPalette() {
       <br />
       <hr />
       <div style={{ display: "flex", flexWrap: "wrap", gap: "3rem", margin: "20px 0" }}>
-        {["analogous", "triadic", "splitCont"].map((scheme) =>
+        {["Analogous", "Triadic", "Split"].map((scheme) =>
           palette[scheme].map((color, index) => (
             <div key={`${scheme}-${index}`} style={{ textAlign: "center", cursor: "pointer" }} onClick={() => copyToClipboard(color)}>
               <div
