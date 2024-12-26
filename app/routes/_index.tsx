@@ -34,6 +34,7 @@ export default function Index() {
 		<ColorPalette />
 		{/* <MenuItems/> */}
       </div>
+	  <Footer/>
     </div>
   );
 }
@@ -144,4 +145,23 @@ function MenuItems () {
             ))}
           </ul>
         </nav> 
+}
+
+export  function Footer() {
+	return (
+		<div className="absolute w-full  bottom-0
+		border-t border-slate-400 bg-neutral-900 backdrop-filter backdrop-blur-lg bg-opacity-30 py-5 text-center">
+			<p className="text-gray-500">
+				Made with ❤️ by {" "}
+				<a
+					className="font-medium text-gray-200 underline transition-colors"
+					href="https://bojanjagetic.com"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Bojan Jagetic
+				</a>
+			</p>
+		</div>
+	);
 }
